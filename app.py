@@ -17,10 +17,26 @@ st.markdown("""
   --arrow-hover-bg: rgba(51,87,167,0.2);
 }
             
-<style>
-    button:hover {
-    background-color: #4CAF50 !important; /* Change to your desired hover color */
-    color: white !important; /* Optional: Change text color on hover */
+       
+            
+.st-emotion-cache-1m3gj4w {
+    color: var(--primary-color);
+}      
+
+.st-emotion-cache-11v6ept {
+    color: var(--primary-color);
+}      
+            
+.st-key-st-key-false_btn button:hover {
+  color: #fff;
+}       
+
+.st-key-st-key-true_btn button:hover {
+  color: #fff;
+}                 
+            
+.st-emotion-cache-4dbbln {
+    color: var(--primary-color);
 }
             
 transition.style {
@@ -45,9 +61,7 @@ color: white;
 }         
 
             
-button:not(:active):hover {
-            background-color: var(blue);
-}           
+        
 </style>
 """, unsafe_allow_html=True)
 
@@ -233,7 +247,7 @@ if page == "Labeling":
                     st.rerun()
         with tcol:
             with stylable_container(key='true_btn', css_styles="""
-                button {width:100%;padding:1rem;background:var(--primary-color);color:#fff;border:none;border-radius:0.5rem;transition:transform 0.2s;}button:hover {transform:scale(1.05);}"""):
+                button {width:100%;padding:1rem;background:var(--primary-color);color:#fff;border:none;border-radius:0.5rem;transition:transform 0.2s;}button:hover {transform:scale(1.05); color: #fff}"""):
                 if st.button("✅ TRUE"):
                     st.session_state.labels_map[cid] = 1
                     persist_labels(st.session_state.labels_map)
