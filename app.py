@@ -7,7 +7,8 @@ from streamlit_extras.stylable_container import stylable_container
 # ────────────────────────────────────────────────────────────────────
 # GLOBAL CSS VARIABLES ONLY
 # ────────────────────────────────────────────────────────────────────
-st.markdown("""
+st.markdown(
+"""
 <style>
 :root {
   --primary-color: #3357a7;
@@ -15,9 +16,7 @@ st.markdown("""
   --danger-color: #dc3545;
   --arrow-bg: rgba(51,87,167,0.1);
   --arrow-hover-bg: rgba(51,87,167,0.2);
-}
-            
-       
+}     
             
 .st-emotion-cache-1m3gj4w {
     color: var(--primary-color);
@@ -28,11 +27,11 @@ st.markdown("""
 }      
             
 .st-key-st-key-false_btn button:hover {
-  color: #fff;
+    color: #fff;
 }       
 
 .st-key-st-key-true_btn button:hover {
-  color: #fff;
+    color: #fff;
 }                 
             
 .st-emotion-cache-4dbbln {
@@ -53,17 +52,15 @@ transition.style {
 }
             
 .st-emotion-cache-9ajs8n {
-color: black;
+    color: black;
 }          
 
 .st-emotion-cache-9ajs8n {
-color: white;
 }         
-
-            
-        
 </style>
-""", unsafe_allow_html=True)
+"""
+, unsafe_allow_html=True
+)
 
 # CONFIG
 COMMENTS_FILE     = "data/comments.csv"
